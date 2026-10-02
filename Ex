@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แปลง พ.ศ. เป็น ค.ศ.</title>
+</head>
+
+<body>
+
+    <h1>แปลง พ.ศ. เป็น ค.ศ.</h1>
+
+    <!-- ช่องกรอก พ.ศ. -->
+    <input type="number" id="year" placeholder="กรอก พ.ศ.">
+
+    <!-- ปุ่มกดแปลง -->
+    <button onclick="convertYear()">แปลง</button>
+
+    <!-- แสดงผล -->
+    <p id="result"></p>
+
+
+    <script>
+        function convertYear() {
+
+            // รับค่าจากช่องกรอก
+            let buddhistYear =
+                Number(document.getElementById("year").value);
+
+            // พ.ศ. - 543 = ค.ศ.
+            let christianYear =
+                buddhistYear - 543;
+
+            // แสดงผล
+            document.getElementById("result").innerHTML =
+                "ค.ศ. " + christianYear;
+        }
+    </script>
+
+</body>
+
+
+</html>
